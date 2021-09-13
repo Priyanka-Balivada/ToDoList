@@ -55,7 +55,7 @@ app.get("/", function(req, res) {
       });
       res.redirect("/");
     } else {
-      res.render("List", {
+      res.render("list", {
         listTitle: "Today",
         newListItems: items
       });
@@ -80,7 +80,7 @@ app.get("/:topic", function(req, res) {
         res.redirect("/" + customListItems);
       } else {
         //Show existing list
-        res.render("List", {
+        res.render("list", {
           listTitle: results.name,
           newListItems: results.listItems
         });
